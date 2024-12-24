@@ -14,19 +14,31 @@ export default function TaskCard({ task, onEdit, onDelete }: TaskCardProps) {
 
   return (
     <div
-      className="border p-4 rounded shadow hover:shadow-md cursor-pointer"
+      className="bg-zinc-950 border border-zinc-700 rounded-lg shadow-lg p-5 hover:shadow-xl transition-shadow duration-300 cursor-pointer"
       onClick={() => router.push(`/task/${task._id}`)}
     >
-      <h2 className="font-bold text-lg">{task.name}</h2>
-      <p>{task.description}</p>
-      <p className="text-gray-500 text-sm">Due: {new Date(task.dueDate).toLocaleDateString()}</p>
-      <div className="mt-4 flex justify-between">
+      {/* Task Title */}
+      <h2 className="text-xl font-bold text-zinc-100 mb-2 truncate">{task.name}</h2>
+
+      {/* Task Description */}
+      <div className="mb-4 max-h-24 overflow-y-auto text-zinc-400 text-sm pr-2 scrollbar-thin scrollbar-thumb-zinc-600 scrollbar-track-zinc-800">
+        <p>{task.description}</p>
+      </div>
+
+      {/* Task Due Date */}
+      <p className="text-sm text-zinc-500 mb-4">
+        <span className="font-medium">Due:</span>{" "}
+        {new Date(task.dueDate).toLocaleDateString()}
+      </p>
+
+      {/* Action Buttons */}
+      <div className="flex justify-between">
         <button
           onClick={(e) => {
             e.stopPropagation();
             onEdit(task);
           }}
-          className="text-blue-500 text-sm hover:underline"
+          className="px-3 py-1 bg-green-600 text-sm text-white rounded-lg hover:bg-green-700 transition-all duration-300"
         >
           Edit
         </button>
@@ -35,7 +47,7 @@ export default function TaskCard({ task, onEdit, onDelete }: TaskCardProps) {
             e.stopPropagation();
             onDelete(task._id);
           }}
-          className="text-red-500 text-sm hover:underline"
+          className="px-3 py-1 bg-red-600 text-sm text-white rounded-lg hover:bg-red-700 transition-all duration-300"
         >
           Delete
         </button>

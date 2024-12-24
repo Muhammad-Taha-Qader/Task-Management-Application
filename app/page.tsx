@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navbar */}
-      <nav className="bg-zinc-900 text-white shadow-lg">
+      <nav className="bg-zinc-900 text-white shadow-lg py-3">
         <div className="container mx-auto px-6 py-3 flex justify-between items-center">
           <Link href="/" className="text-xl font-bold hover:opacity-90">
             Twiligit Sols
@@ -39,9 +39,9 @@ export default function Home() {
       </nav>
 
       {/* Main Content */}
-      <main className="flex-grow flex flex-col justify-center items-center bg-gray-50 p-6">
+      <main className="flex-grow flex flex-col justify-center items-center bg-black p-6">
         <div className="flex flex-col justify-center mx-auto text-center space-y-8 item-center">
-          <h1 className="text-4xl font-extrabold text-gray-800">
+          <h1 className="text-4xl font-extrabold text-gray-200">
             Welcome to Task Management Application
           </h1>
           <p className="text-lg text-gray-600">

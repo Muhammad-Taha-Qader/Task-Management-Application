@@ -57,7 +57,7 @@ const SignIn = () => {
 
   return (
     <div className="flex  flex-col h-lvh items-center justify-center">
-    <div className=" max-w-md mx-auto bg-black p-4 ">
+    <div className=" max-w-md mx-auto bg-zinc-800 rounded-lg shadow-md my-7 p-6 ">
       <h1 className="text-2xl font-semibold text-center mb-6 text-zinc-100">Sign In</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Email input */}
@@ -87,7 +87,7 @@ const SignIn = () => {
         <button
           type="submit"
           // className="w-full p-2 bg-blue-500 text-white rounded-md"
-          className={`w-full py-3 text-white rounded-md ${loading ? "bg-gray-400" : "bg-zinc-400 hover:bg-zinc-600"} focus:outline-none`}
+          className={`w-full py-3 text-white rounded-md ${loading ? "bg-gray-400" : "bg-green-600 hover:bg-green-700"} focus:outline-none`}
           disabled={loading}  // Disable button while the request is in progress
         >
           {loading ? "Signing In..." : "Sign In"}
@@ -96,7 +96,7 @@ const SignIn = () => {
 
       <p className="mt-4 text-center text-sm text-gray-600">
         Do not have an account?{" "}
-        <Link href="signup" className="text-zinc-500 hover:underline">
+        <Link href="signup" className="text-green-500 hover:underline">
           Sign up here
         </Link>
       </p>

@@ -67,7 +67,7 @@ const SignUp = () => {
 
   return (
     <div className="h-lvh flex flex-col items-center justify-center">
-      <div className="max-w-lg mx-auto p-6 bg-black rounded-lg shadow-md my-7">
+      <div className="min-w-96 max-w-96 p-6 bg-zinc-800 rounded-lg shadow-md my-7">
         <h1 className="text-3xl font-semibold text-center mb-6 text-zinc-100">Sign Up</h1>
 
         {/* Form */}
@@ -134,7 +134,7 @@ const SignUp = () => {
           <button
             type="submit"
             disabled={loading}
-            className={`w-full py-3 text-white rounded-md ${loading ? "bg-gray-400" : "bg-zinc-400 hover:bg-zinc-600"} focus:outline-none`}
+            className={`w-full py-3 text-white rounded-md ${loading ? "bg-gray-400" : "bg-green-600 hover:bg-green-700"} focus:outline-none`}
           >
             {loading ? "Creating Account..." : "Sign Up"}
           </button>
@@ -143,7 +143,7 @@ const SignUp = () => {
         {/* Link to Sign In page */}
         <p className="mt-4 text-center text-sm text-zinc-200/50">
         Already have an account?{" "}
-          <Link href="signin" className="text-zinc-500 hover:underline">Sign in here</Link>
+          <Link href="signin" className="text-green-500 hover:underline">Sign in here</Link>
         </p>
       </div>
     </div>
