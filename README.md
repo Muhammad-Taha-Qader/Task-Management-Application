@@ -22,8 +22,10 @@ The **Task Management Application** is designed to help users manage their tasks
 
 ---
 ## Demo
-![Watch the DEMO.webm](public/DEMO.webm)
-![Screen Recoding](/public/DEMO.webm)
+## Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/Bnke_WnYYi8/0.jpg)](https://youtu.be/Bnke_WnYYi8)
+
 ---
 
 ## How to Use
