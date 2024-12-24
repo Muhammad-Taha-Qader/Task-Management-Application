@@ -1,17 +1,3 @@
-// "use client";
-// import useAuth from "@/lib/useAuth"; // Custom hook for authentication
-
-// export default function Task() {
-//     const isAuthenticated = useAuth(); // Redirects to login if user is not authenticated
-//     return (
-//       <div className="">
-//         <h1 className="text-2xl">Task-Management Panel</h1> 
-//         <p>{isAuthenticated}</p>
-//       </div>
-  
-//     );
-//   }
-  
 "use client";
 
 import { useEffect, useState } from "react";
@@ -20,7 +6,7 @@ import useAuth from "@/lib/useAuth";
 import { Task } from "@/types";
 
 export default function TaskManagementPage() {
-  const isAuthenticated = useAuth();
+  const isAuthenticated = useAuth(); // Redirects to login if user is not authenticated
   const [tasks, setTasks] = useState<Task[]>([]);
   const [isEditing, setIsEditing] = useState(false);
   const [editTaskId, setEditTaskId] = useState<string | null>(null);
@@ -113,7 +99,7 @@ export default function TaskManagementPage() {
             type="text"
             value={formData.name}
             onChange={handleInputChange}
-            className="w-full border rounded px-3 py-2"
+            className="w-full border rounded px-3 py-2 text-zinc-900"
             required
           />
         </div>
@@ -127,7 +113,7 @@ export default function TaskManagementPage() {
             name="description"
             value={formData.description}
             onChange={handleInputChange}
-            className="w-full border rounded px-3 py-2"
+            className="w-full border rounded px-3 py-2  text-zinc-900"
             required
           ></textarea>
         </div>
@@ -142,7 +128,7 @@ export default function TaskManagementPage() {
             type="date"
             value={formData.dueDate}
             onChange={handleInputChange}
-            className="w-full border rounded px-3 py-2"
+            className="w-full border rounded px-3 py-2  text-zinc-900"
             required
           />
         </div>
