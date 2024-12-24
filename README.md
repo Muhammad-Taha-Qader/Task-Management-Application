@@ -21,7 +21,6 @@ The **Task Management Application** is designed to help users manage their tasks
   - A custom `useAuth` hook ensures only authenticated users can access protected frontend routes.
 
 ---
-## Demo
 ## Demo Video
 
 [![Watch the video](https://img.youtube.com/vi/Bnke_WnYYi8/0.jpg)](https://youtu.be/Bnke_WnYYi8)
